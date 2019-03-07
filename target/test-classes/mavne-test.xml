@@ -9,6 +9,6 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
     </spring:beans>
     <munit:test name="mavne-test-mavendemoFlowTest" description="Test">
         <flow-ref name="mavendemoFlow" doc:name="Flow-ref to mavendemoFlow"/>
-        <munit:assert-on-equals expectedValue="#[payload]" actualValue="#[&quot;test1&quot;]" doc:name="Assert Equals"/>
+        <munit:assert-on-equals expectedValue="#[payload]" actualValue="#[&quot;test&quot;]" doc:name="Assert Equals"/>
     </munit:test>
 </mule>
