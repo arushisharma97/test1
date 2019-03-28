@@ -8,7 +8,7 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
     <flow name="propertyFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
-        <set-property propertyName="http.status" value="200" doc:name="Property"/>
-        <set-property propertyName="http.reason" value="created" doc:name="Property"/>
+        <set-property propertyName="http.status" value="201" doc:name="Property"/>
+        <set-property propertyName="http.reason" value="OK" doc:name="Property"/>
     </flow>
 </mule>
