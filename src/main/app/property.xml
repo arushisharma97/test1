@@ -9,6 +9,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
     <flow name="propertyFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
         <set-property propertyName="http.status" value="201" doc:name="Property"/>
-        <set-property propertyName="http.reason" value="OK" doc:name="Property"/>
+        <set-property propertyName="http.reason" value="OKzz" doc:name="Property"/>
     </flow>
 </mule>
