@@ -200,6 +200,26 @@
             <artifactId>mule-plugin-weave</artifactId>
             <version>${mule.version}</version>
             <scope>provided</scope>
+        </dependency>	
+    <dependency>
+            <groupId>org.mycompany</groupId>
+            <artifactId>some-artifact</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0</version>
+        </dependency>
+    <dependency>
+            <groupId>oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.3</version>
+        </dependency>
+    <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc14</artifactId>
+            <version>10.2.0.4.0</version>
         </dependency>
     </dependencies>
 

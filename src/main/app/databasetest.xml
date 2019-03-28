@@ -5,12 +5,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
 http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
-http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
-http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
-   
-    <flow name="twoflowFlow">
-        <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
-    </flow>
-    <flow name="twoflowFlow1">
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+    <db:oracle-config name="Oracle_Configuration" host="localhost" port="1521" instance="XE" user="system" password="Sharma97@" doc:name="Oracle Configuration"/>
+    <flow name="databasetestFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/database" allowedMethods="GET" doc:name="HTTP"/>
+        <db:no-operation-selected config-ref="Oracle_Configuration" doc:name="Database"/>
     </flow>
 </mule>

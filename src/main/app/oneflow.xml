@@ -9,8 +9,5 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
     <flow name="oneflowFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
-        <db:insert config-ref="Oracle_Configuration" doc:name="Database">
-            <db:parameterized-query/>
-        </db:insert>
     </flow>
 </mule>

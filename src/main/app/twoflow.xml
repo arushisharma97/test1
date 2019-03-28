@@ -12,6 +12,5 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
         <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
     </flow>
     <flow name="twoflowFlow1">
-        <db:no-operation-selected config-ref="Oracle_Configuration" doc:name="Database"/>
     </flow>
 </mule>
