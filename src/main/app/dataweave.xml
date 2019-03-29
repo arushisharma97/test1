@@ -10,7 +10,7 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
     <flow name="dataweaveFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/dataweave" allowedMethods="GET" doc:name="HTTP"/>
         <dw:transform-message doc:name="Transform Message" metadata:id="60153fc9-320d-4579-b2d8-a336f3b44c0a">
-            <dw:input-payload mimeType="application/csv"/>
+            <dw:input-payload />
             <dw:set-payload><![CDATA[%dw 1.0
 %output application/java
 ---
