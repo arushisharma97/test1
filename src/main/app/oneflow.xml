@@ -8,7 +8,7 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
 http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
 http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd">
-    <apikit:config name="Router" raml="" consoleEnabled="true" consolePath="console" keepRamlBaseUri="false" doc:name="Router"/>
+    
     <flow name="oneflowFlow1">
         <apikit:router config-ref="Router" doc:name="APIkit Router"/>
     </flow>

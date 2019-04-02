@@ -8,8 +8,14 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
 http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
     <db:oracle-config name="Oracle_Configuration" host="localhost" port="1521" instance="XE" user="system" password="Sharma97@" doc:name="Oracle Configuration"/>
+    <db:mysql-config name="MySQL_Configuration" host="localhost" port="36" user="root" password="root" database="create" doc:name="MySQL Configuration"/>
     <flow name="databasetestFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/database" allowedMethods="GET" doc:name="HTTP"/>
-        <db:no-operation-selected config-ref="Oracle_Configuration" doc:name="Database"/>
+        <db:stored-procedure config-ref="Oracle_Configuration" doc:name="Database">
+            <db:parameterized-query/>
+        </db:stored-procedure>
+        <db:delete config-ref="MySQL_Configuration" doc:name="Database">
+            <db:parameterized-query/>
+        </db:delete>
     </flow>
 </mule>
